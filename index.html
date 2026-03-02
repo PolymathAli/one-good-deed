@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Good Deed | عمل خير واحد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-green: #10b981; --bg-dark: #0a0a0a; }
+        body { background-color: var(--bg-dark); color: #ffffff; font-family: 'Inter', 'Noto Sans Arabic', sans-serif; }
+        .rtl { direction: rtl; font-family: 'Noto Sans Arabic', sans-serif; }
+        .glass-nav { background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .screenshot-container { scrollbar-width: none; -ms-overflow-style: none; cursor: grab; }
+        .screenshot-container::-webkit-scrollbar { display: none; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .phone-frame { border: 8px solid #222; border-radius: 2.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tight" data-i18n="app-name">One Good Deed</div>
+            <button id="lang-toggle" class="px-4 py-2 rounded-full border border-white/10 hover:bg-white/5 transition-all text-sm font-medium">English / العربية</button>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto reveal">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" data-i18n="hero-title">One Good Deed</h1>
+            <p class="text-xl md:text-2xl text-white/60 mb-10" data-i18n="hero-tagline">One small good deed every day.</p>
+            
+            <a href="#" class="download-link inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-black font-bold py-4 px-10 rounded-2xl transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                <span data-i18n="btn-download">Download Android APK</span>
+            </a>
+            
+            <div class="mt-8 text-white/40 font-medium"><span data-i18n="by-author">By: Ali Nasser</span></div>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-white/[0.02] text-center">
+        <div class="max-w-4xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="concept-title">Spreading Kindness</h2>
+            <p class="text-xl text-white/70 leading-relaxed" data-i18n="concept-text">One Good Deed helps you perform small daily acts of goodness through a random daily suggestion.</p>
+        </div>
+    </section>
+
+    <section class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900/50 p-10 rounded-3xl border border-white/5 reveal">
+                    <div class="text-4xl mb-6">🎲</div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="step1-title">Tap the button</h3>
+                    <p class="text-white/60" data-i18n="step1-desc">Generate a random deed with a single tap.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-10 rounded-3xl border border-white/5 reveal" style="transition-delay: 100ms;">
+                    <div class="text-4xl mb-6">📿</div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="step2-title">Receive a deed</h3>
+                    <p class="text-white/60" data-i18n="step2-desc">Get a simple, meaningful action.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-10 rounded-3xl border border-white/5 reveal" style="transition-delay: 200ms;">
+                    <div class="text-4xl mb-6">✅</div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="step3-title">Build your streak</h3>
+                    <p class="text-white/60" data-i18n="step3-desc">Track your consistency over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 overflow-hidden bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto px-6 mb-12">
+            <h2 class="text-3xl font-bold mb-2" data-i18n="screens-title">App Preview</h2>
+        </div>
+        <div class="screenshot-container flex gap-6 overflow-x-auto px-6 pb-12">
+            <div class="flex-shrink-0 w-64 phone-frame"><img src="./images/app1.png" onerror="this.src='https://placehold.co/400x800/18181b/ffffff?text=Screen+1'" class="w-full"></div>
+            <div class="flex-shrink-0 w-64 phone-frame"><img src="./images/app2.png" onerror="this.src='https://placehold.co/400x800/18181b/ffffff?text=Screen+2'" class="w-full"></div>
+            <div class="flex-shrink-0 w-64 phone-frame"><img src="./images/app3.png" onerror="this.src='https://placehold.co/400x800/18181b/ffffff?text=Screen+3'" class="w-full"></div>
+            <div class="flex-shrink-0 w-64 phone-frame"><img src="./images/app4.png" onerror="this.src='https://placehold.co/400x800/18181b/ffffff?text=Screen+4'" class="w-full"></div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto bg-emerald-500 rounded-[3rem] p-12 text-center text-black reveal">
+            <h2 class="text-4xl font-bold mb-6" data-i18n="cta-title">Start Your Daily Good Deed</h2>
+            <a href="#" class="download-link inline-block bg-black text-white font-bold py-5 px-12 rounded-2xl shadow-2xl transition-transform hover:scale-105">
+                <span data-i18n="btn-download">Download Android APK</span>
+            </a>
+            <p class="mt-8 text-black/60 font-medium text-sm" data-i18n="cta-guarantee">No ads. No tracking. 100% free.</p>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/5 bg-black text-center">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-white/40 text-sm">&copy; 2026 Ali Nasser • One Good Deed</div>
+            <a href="https://linktr.ee/PolymathX" target="_blank" class="text-white/40 hover:text-white transition-colors">Linktree</a>
+        </div>
+    </footer>
+
+    <script>
+        // CHANGE THIS TO YOUR ACTUAL GITHUB RELEASE URL LATER
+        const DOWNLOAD_URL = "https://github.com/PolymathX/one-good-deed/releases/latest/download/app.apk";
+
+        const translations = {
+            en: {
+                "app-name": "One Good Deed", "hero-title": "One Good Deed", "hero-tagline": "One small good deed every day.",
+                "btn-download": "Download Android APK", "by-author": "By: Ali Nasser", "concept-title": "Spreading Kindness",
+                "concept-text": "One Good Deed helps you perform small daily acts of goodness through a random daily suggestion.",
+                "screens-title": "App Preview", "cta-title": "Start Your Daily Good Deed", "cta-guarantee": "No ads. No tracking. 100% free.",
+                "step1-title": "Tap the button", "step1-desc": "Generate a random deed with a single tap.",
+                "step2-title": "Receive a deed", "step2-desc": "Get a simple, meaningful action.",
+                "step3-title": "Build your streak", "step3-desc": "Track your consistency over time."
+            },
+            ar: {
+                "app-name": "عمل خير واحد", "hero-title": "عمل خير واحد", "hero-tagline": "عمل خير صغير كل يوم.",
+                "btn-download": "تحميل APK للأندرويد", "by-author": "بواسطة: علي ناصر", "concept-title": "نشر اللطف",
+                "concept-text": "يساعدك تطبيق \"عمل خير واحد\" على القيام بأعمال خير صغيرة يومياً من خلال اقتراح عشوائي يومي.",
+                "screens-title": "معاينة التطبيق", "cta-title": "ابدأ عمل الخير اليوم", "cta-guarantee": "بدون إعلانات. بدون تتبع. مجاني 100%.",
+                "step1-title": "اضغط على الزر", "step1-desc": "أنشئ عمل خير عشوائي بضغطة واحدة فقط.",
+                "step2-title": "استلم عمل الخير", "step2-desc": "احصل على فعل بسيط وهادف.",
+                "step3-title": "حافظ على استمراريتك", "step3-desc": "تتبع استمراريتك بمرور الوقت."
+            }
+        };
+
+        let currentLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
+
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.textContent = translations[currentLang][el.getAttribute('data-i18n')];
+            });
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.body.classList.toggle('rtl', currentLang === 'ar');
+            document.querySelectorAll('.download-link').forEach(link => link.href = DOWNLOAD_URL);
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            updateContent();
+        });
+
+        const reveal = () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if(el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('active');
+            });
+        };
+        window.addEventListener('scroll', reveal);
+        updateContent();
+        reveal();
+    </script>
+</body>
+</html>
