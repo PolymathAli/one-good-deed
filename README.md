@@ -6,7 +6,7 @@ One Good Deed is a minimalist Android application designed to encourage daily ac
 
 🚀 [Quick Download](https://github.com/3elwa00/one-good-deed/releases/download/apk/1GoodDeed.apk)
 
-You can always find the latest version on our Releases Page.
+You can always find the latest version on our [Releases Page](https://github.com/3elwa00/one-good-deed/releases/).
 
 ✨ Features
 
